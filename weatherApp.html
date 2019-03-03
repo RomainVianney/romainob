@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html>
+<head>
+  <meta charset = "utf-8"/>
+  <script src="./weatherApp.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="weatherApp.css" type="text/css" rel="stylesheet">
+</head>
+ 
+  <body style="background-color:lightgrey">
+  
+  <div class="myContent">
+	<h1>Welcome to WeatherApp!</h1>
+	<p align="center">
+		<div id="bloc1">
+		<label for="city">Where are you?</label>
+		<input id="city" placeholder="City, State"/>
+	    <button id="submit" onclick="getWeather()" type="button" class="btn btn-primary">Submit</button>
+		</div>
+		<div id="bloc2" class="popup" onclick="getHelp()">Help
+		<span class="popuptext" id="myPopup">Enter: city, state. 
+		Examples: Chicago, US or Chicago, Illinoil </span>
+		</div>
+	</p>
+	<p>
+		<h3 id="result" align="center"></h3>
+		<div id="animation"></div>
+	</p>
+ </div>
+  </body>
+</html>
