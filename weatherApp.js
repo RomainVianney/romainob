@@ -22,13 +22,13 @@ function getWeather(){
           temperature = JSON.stringify(data.main.temp);
           weather=Math.round(temperature);
           weatherResult.html(cityName+" weather: "+weather+"°F");
-		  if(state=="Clouds"){
+		  if(state=="Clouds" || state=="Clear"){
 		  $("#animation").attr("class","cloudy");
 		  }
 		  else if(state=="Rain"){
 		  $("#animation").attr("class","rainy");
 		  }
-		  else if(state=="Clear" || state=="Sunny"){
+		  else if(state=="Sunny"){
 		  $("#animation").attr("class","sunny");
 		  }
 		  else if(state=="Snow"){
